@@ -55,9 +55,10 @@ main{
 
 /* main */
 .box{
-  height: 500px;
-  width: 450px;
-  background: white;
+  min-height: 650px;
+  width: 500px;
+  background-image: url("../img/pergamena2.png");
+  background-size: contain;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -69,7 +70,7 @@ main{
 .box h2{
   position: absolute;
   top: 0;
-  transform: translateY(-50%);
+  
 }
 
 .box li{
