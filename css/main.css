@@ -13,11 +13,10 @@
 
 
 body{
-  background-image: url(
-    "https://media.giphy.com/media/4NrGruVDXhmJDN3ode/giphy.gif");
+  background-image: url("https://media.giphy.com/media/4NrGruVDXhmJDN3ode/giphy.gif");
   background-repeat: no-repeat;
   background-size: cover;
-    
+  height: 100vh;
 }
 
 header{
@@ -55,39 +54,50 @@ main{
 
 /* main */
 .box{
-  min-height: 650px;
+  height: 650px;
   width: 500px;
   background-image: url("../img/pergamena2.png");
   background-size: contain;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
+  flex-wrap: wrap;
+  padding-top: 170px;
 }
 
 .box h2{
   position: absolute;
   top: 0;
+  width: 100%;
+  text-align: center;
   
 }
 
-.box li{
+.box ul{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+}
+
+.box li{
+  flex-basis: calc(100% /3);
+  list-style-type: none;
+  padding: 5px;
 }
 
 .box li::before{
   content: '';   
-    display: inline-block;   
-    height: 15px;   
-    width: 15px;    
-    background-size: 15px;   
-    background-image: url('../img/star.png'); 
-    background-repeat: no-repeat;   
-    margin-right: 10px;
-    background-position: center center;
-    vertical-align: middle;
+  display: inline-block;   
+  height: 15px;   
+  width: 15px;    
+  background-size: 15px;   
+  background-image: url('../img/star.png'); 
+  background-repeat: no-repeat;   
+  margin-right: 10px;
+  background-position: center center;
+  vertical-align: middle;
 }
 
 #eccoti{
