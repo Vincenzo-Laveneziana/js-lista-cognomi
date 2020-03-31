@@ -23,9 +23,11 @@
  console.log(cognomi);
 
  //scrivi anche la posizione della lista in cui  il nuovo utente si trova
-
  for( var i=0; i < cognomi.length; i++){
   if(tuoCognomeUp == cognomi[i]){
-    console.log("Il nuovo utente si trova nella posizione " + (i+1) + " della lista ordinata");
+    console.log("Il nuovo utente si trova alla posizione " + (i+1) + " della lista ordinata");
   }
  }
+
+
+ 
