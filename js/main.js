@@ -1,33 +1,76 @@
-/**
- * chiedere all’utente il cognome
- * inserirlo in un array con altri cognomi: ‘Bianchi’, ‘Rossi’, ‘Duzioni’, ‘Balsano’, ‘Verdi’
- * stampa la lista ordinata alfabeticamente
- * scrivi anche la posizione della lista in cui  il nuovo utente si trova
- */
 
- //chiedere all’utente il cognome
- var tuoCognome = prompt("inserisci il tuo cognome");
- console.log(tuoCognome);
+var cognomi = ["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi", "Laveneziana"];
 
- //rendo il cognome dell'ultente first letter uppercase
- var tuoCognomeUp = tuoCognome.charAt(0).toUpperCase() + tuoCognome.slice(1);
+bottoneCerca.addEventListener("click",
+  function(){
+    //chiedere all’utente il cognome
+    var tuoCognome = document.getElementById("tuo-cognome");
+    console.log(tuoCognome);
 
- //inserirlo in un array con altri cognomi: ‘Bianchi’, ‘Rossi’, ‘Duzioni’, ‘Balsano’, ‘Verdi’
- var cognomi = [" Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi", "Laveneziana"];
+    //rendo il cognome dell'ultente first letter uppercase
+    var tuoCognomeUp = tuoCognome.charAt(0).toUpperCase() + tuoCognome.slice(1);
 
- cognomi.push(tuoCognomeUp);
- console.log(cognomi);
+    if(cognomi.indexOf(tuoCognomeUp) < 0){
 
- //stampa la lista ordinata alfabeticamente
- cognomi.sort();
- console.log(cognomi);
+      cognomi.push(tuoCognomeUp);
+      console.log(cognomi);
 
- //scrivi anche la posizione della lista in cui  il nuovo utente si trova
- for( var i=0; i < cognomi.length; i++){
-  if(tuoCognomeUp == cognomi[i]){
-    console.log("Il nuovo utente si trova alla posizione " + (i+1) + " della lista ordinata");
+      //stampa la lista ordinata alfabeticamente
+      cognomi.sort();
+      console.log(cognomi);
+
+
+      //scrivi anche la posizione della lista in cui  il nuovo utente si trova
+
+      var elLista = document.getElementById("list");
+
+      for( var i=0; i < cognomi.length; i++){
+
+        var elementoLista = cognomi[i];
+
+        var contenuto = elLista.innerHTML;
+
+        var nuovoElemento = "<li>" + elementoLista + "</li>"
+          elLista.innerHTML = contenuto + nuovoElemento;
+        
+        if(tuoCognomeUp == cognomi[i]){
+          console.log("Il nuovo utente si trova alla posizione " + (i+1) + " della lista ordinata");
+          document.getElementById("eccoti2").innerHTML = (i+1);
+        }
+
+      }
+
+    eccoti.className = "show";
+
+    } else{
+      alert("cognome già inserito");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+   
+
+
+
+
+
+
+
+
+
+
+
   }
- }
+)
 
 
- 

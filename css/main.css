@@ -37,6 +37,14 @@ main{
   font-family: 'Carnevalee Freakshow';
 }
 
+.hidden{
+  visibility: hidden;
+}
+
+.show{
+  visibility: visible;
+}
+
 /* header nav */
 #head_nav{
   line-height: 50px;
@@ -55,10 +63,32 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .box h2{
   position: absolute;
   top: 0;
   transform: translateY(-50%);
+}
+
+.box li{
+  list-style-type: none;
+}
+
+.box li::before{
+  content: '';   
+    display: inline-block;   
+    height: 15px;   
+    width: 15px;    
+    background-size: 15px;   
+    background-image: url('../img/star.png'); 
+    background-repeat: no-repeat;   
+    margin-right: 10px;
+    background-position: center center;
+    vertical-align: middle;
+}
+
+#eccoti{
+  text-align: center;
 }

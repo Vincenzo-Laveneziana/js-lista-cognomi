@@ -10,6 +10,9 @@
 
   <!-- font -->
   <link rel="stylesheet" href="css/Carnevalee Freakshow.ttf">
+
+  <!-- fontawesome -->
+  
 </head>
 
 
@@ -26,25 +29,31 @@
       <h2 class="west">Per coscere se sei ricercato inserisci il tuo cognome</h2>
 
       <input id="tuo-cognome" type="text" placeholder="Inserisci il tuo Cognome">
-      <button id="cerca">Cerca</button>
+      <button id="bottoneCerca">Cerca</button>
 
       <h3 class="west">Lista dei ricercati:</h3>
-
-      <ul>
-        <li>Tizio</li>
-        <li>caio</li>
+      <ul id="list">
+          
       </ul>
+      
+      <div id="eccoti" class="hidden">
+        
+        <h4>Sei prensente in lista!!</h4>
+        <h4>Al momento sei la <span id="eccoti2">posizione</span>° persona più ricercata !</h4>
+        <h3>SCAPPA!!!!!</h3>
+      </div>
+      
+    
 
     </div>
 
 
   </main>
   
+  if(cognomi.indexOf(tuoCognomeUp) < 0
 
 
 
-
-
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/main2.js"></script>
 </body>
 </html>
