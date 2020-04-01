@@ -47,29 +47,6 @@ bottoneCerca.addEventListener("click",
     }
 
 
-
-
-
-
-
-
-
-
-
-
-    
-   
-
-
-
-
-
-
-
-
-
-
-
   }
 )
 
